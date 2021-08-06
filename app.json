@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "glub-client",
+    "slug": "glub-client",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "glub-client"
+}
