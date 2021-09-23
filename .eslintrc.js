@@ -21,5 +21,6 @@ module.exports = {
   rules: {
     'prettier/prettier': 'warn',
     'no-console': 'error',
+    'react/display-name': 'off',
   },
 }

@@ -1,23 +1,25 @@
 import { StatusBar } from 'expo-status-bar'
+import { NavigationContainer } from '@react-navigation/native'
+import BottomTabNavigator from 'navigation/BottomTabs'
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
-import CustomText from 'components/CustomText'
+import { NativeBaseProvider } from 'native-base'
+import { theme } from './theme.js'
+import moment from 'moment/min/moment-with-locales'
 
 export default function App() {
+  moment.locale('es')
+  const config = {
+    dependencies: {
+      'linear-gradient': require('expo-linear-gradient').LinearGradient,
+    },
+  }
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <CustomText>Hello boy</CustomText>
-      <StatusBar style="auto" />
-    </View>
+    <NativeBaseProvider config={config} theme={theme}>
+      <NavigationContainer>
+        <StatusBar style="light" />
+        <BottomTabNavigator />
+      </NavigationContainer>
+    </NativeBaseProvider>
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-})

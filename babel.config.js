@@ -9,6 +9,14 @@ module.exports = function (api) {
         {
           alias: {
             components: './src/components',
+            api: './src/api',
+            hooks: './src/hooks',
+            utils: './src/utils',
+            navigation: './src/navigation',
+            screens: './src/screens',
+            context: './src/context',
+            public: './public',
+            root: './',
           },
         },
       ],

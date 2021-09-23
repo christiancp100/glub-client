@@ -1,0 +1,24 @@
+{
+  "colors": {
+    "primary": "#009d85",
+    "secondary": "#f01c35",
+    "warning": "#f9e267",
+    "default": "#121414",
+    "background": "#212527",
+    "dark": "#000000",
+    "light": "#FFFFFF",
+    "logo": {
+      "green": "#009d85",
+      "yellow": "#f9e267",
+      "pink": "#ef426f"
+    }
+  },
+  "fonts": {},
+  "sizes": {
+    "xs": 10,
+    "s": 16,
+    "m": 20,
+    "l": 25,
+    "xl": 30
+  }
+}
