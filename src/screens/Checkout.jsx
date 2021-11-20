@@ -1,6 +1,7 @@
 import React from 'react'
 import layout from 'components/layout/Layout.styles'
 import PropTypes from 'prop-types'
+import { useNavigation } from '@react-navigation/core'
 import { Text, VStack, View } from 'native-base'
 import { Button } from 'components/ui/Button'
 import { SafeAreaView } from 'react-native'
@@ -19,6 +20,7 @@ const Checkout = ({
   },
 }) => {
   const { open, close, isOpen } = useAlertModal()
+  const navigation = useNavigation()
   return (
     <SafeAreaView style={layout.container}>
       <VStack alignItems="center">
@@ -28,7 +30,13 @@ const Checkout = ({
             last4Digits={2356}
             expirationDate="10/25"
           />
-          <Button mt={5} variant="black">
+          <Button
+            mt={5}
+            variant="black"
+            onPress={() =>
+              navigation.navigate('AddCreditCard', { id, price, premium })
+            }
+          >
             Añadir nueva tarjeta
           </Button>
         </View>

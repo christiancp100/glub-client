@@ -4,6 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack'
 import { SingleEvent } from 'screens/SingleEvent'
 import Home from 'screens/Home'
 import Checkout from 'screens/Checkout'
+import AddCreditCard from 'screens/AddCreditCard'
 
 const Stack = createStackNavigator()
 
@@ -26,6 +27,12 @@ export const HomeTabs = () => {
         options={{ headerShown: false }}
         name="Checkout"
         component={Checkout}
+      />
+
+      <Stack.Screen
+        options={{ headerShown: false }}
+        name="AddCreditCard"
+        component={AddCreditCard}
       />
     </Stack.Navigator>
   )
